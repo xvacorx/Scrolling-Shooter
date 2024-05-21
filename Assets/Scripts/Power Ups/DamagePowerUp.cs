@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamagePowerUp : PowerUps
 {
-    public float damageIncrease = 5f;
+    public float damageIncrease = 1f;
 
     public override void ApplyPowerUp(GameObject player)
     {
