@@ -4,27 +4,35 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    public float startingLife;
+    public float life;
     public float damage;
 
-    float life;
+    private PlayerManager player;
 
     private void Start()
     {
-        life = startingLife;
+        player = FindObjectOfType<PlayerManager>();
+        if (player == null)
+        {
+            Debug.LogError("PlayerManager no encontrado en la escena.");
+        }
     }
     public void LoseLife(float hitDamage)
     {
-        startingLife -= hitDamage;
-        if(startingLife <= 0) { Destroy(gameObject); }
+        life -= hitDamage;
+        if (life <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerProjectile"))
         {
-            PlayerManager player = GetComponent<PlayerManager>();
-            LoseLife(player.damage);
-            if(life <= 0) { Destroy(gameObject); }   
+            if (player != null)
+            {
+                LoseLife(player.damage);
+            }
         }
     }
 }
