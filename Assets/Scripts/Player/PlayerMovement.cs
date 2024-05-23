@@ -26,12 +26,14 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         GroundCheck();
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         Vector3 movement = new Vector3(moveHorizontal, 0f, 0f) * speed * Time.deltaTime;
         rb.MovePosition(rb.position + movement);
+
         if (Input.GetButtonDown("Jump") && grounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.AddForce(rb.velocity.x, jumpForce,0);
         }
 
         if (!grounded)
