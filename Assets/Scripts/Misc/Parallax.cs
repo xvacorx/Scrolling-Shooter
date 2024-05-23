@@ -10,7 +10,7 @@ public class Parallax : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
         if (transform.position.x <= leftLimit)
         {
             transform.position = new Vector3(rightLimit, transform.position.y, transform.position.z);
