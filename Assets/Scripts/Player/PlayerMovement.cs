@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private Transform foot;
     public bool grounded;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
