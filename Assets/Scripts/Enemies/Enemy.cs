@@ -7,14 +7,25 @@ public abstract class Enemy : MonoBehaviour
     public float life;
     public float damage;
 
-    private PlayerManager player;
+    protected PlayerManager player;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerManager>();
-        if (player == null)
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PlayerProjectile"))
         {
-            Debug.LogError("PlayerManager no encontrado en la escena.");
+            LoseLife(player.damage);
+        }
+    }
+    public virtual void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent(out PlayerManager playerManager))
+        {
+            playerManager.DecreaseHealth(damage);
+            Despawn();
         }
     }
     public void LoseLife(float hitDamage)
@@ -25,14 +36,8 @@ public abstract class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter(Collider other)
+    public void Despawn()
     {
-        if (other.CompareTag("PlayerProjectile"))
-        {
-            if (player != null)
-            {
-                LoseLife(player.damage);
-            }
-        }
+        Destroy(gameObject);
     }
 }

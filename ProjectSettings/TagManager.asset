@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - PowerUp
+  - PlayerProjectile
+  - FxTemporaire
+  - EnemyProjectile
+  - Enemy
   layers:
   - Default
   - TransparentFX

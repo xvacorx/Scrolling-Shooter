@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  attackSpeed: 1
+  attackSpeed: 0.5
   health: 100
 --- !u!114 &8505437039146950240
 MonoBehaviour:
@@ -217,7 +217,7 @@ MonoBehaviour:
   xRightLimit: 0
   downForce: 5
   speed: 7.5
-  jumpForce: 500
+  jumpForce: 750
   groundCheckRadius: 0.25
   groundLayer:
     serializedVersion: 2
@@ -825,7 +825,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7684677543225702287, guid: c4ed38c72957f2241ad144a1614956d9,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6986918571508003581}
+      addedObject: {fileID: 1785867025129480168}
   m_SourcePrefab: {fileID: 100100000, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
 --- !u!4 &4855346596710562763 stripped
 Transform:
@@ -839,7 +839,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4236346546659281108}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6986918571508003581
+--- !u!114 &1785867025129480168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
