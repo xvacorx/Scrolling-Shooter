@@ -217,7 +217,7 @@ MonoBehaviour:
   xRightLimit: 0
   downForce: 5
   speed: 7.5
-  jumpForce: 750
+  jumpForce: 500
   groundCheckRadius: 0.25
   groundLayer:
     serializedVersion: 2
@@ -269,8 +269,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.4858837, y: 1.9138579, z: 1}
-  m_Center: {x: -0.006793976, y: 0.79986405, z: 0}
+  m_Size: {x: 3.1603804, y: 1.9138579, z: 1}
+  m_Center: {x: 0.030612469, y: 0.79986405, z: 0}
 --- !u!114 &1300092463350216164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,7 +825,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7684677543225702287, guid: c4ed38c72957f2241ad144a1614956d9,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7266895069481589655}
+      addedObject: {fileID: 6986918571508003581}
   m_SourcePrefab: {fileID: 100100000, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
 --- !u!4 &4855346596710562763 stripped
 Transform:
@@ -839,7 +839,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4236346546659281108}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7266895069481589655
+--- !u!114 &6986918571508003581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

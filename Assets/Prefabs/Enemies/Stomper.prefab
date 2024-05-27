@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4654248682318665176}
   - component: {fileID: 2230184893172985333}
-  - component: {fileID: 2990992758211212093}
-  - component: {fileID: 1686490804816224014}
+  - component: {fileID: 988899155933851140}
   m_Layer: 0
   m_Name: Stomper
   m_TagString: Untagged
@@ -49,35 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 10
   damage: 1
---- !u!54 &2990992758211212093
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638389421503248164}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 0
---- !u!65 &1686490804816224014
-BoxCollider:
+--- !u!136 &988899155933851140
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,9 +66,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 1.5943644, z: 2}
-  m_Center: {x: 0, y: 0.015635908, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Height: 0.47
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.00050868094, z: 0.0050475374}
 --- !u!1001 &8472863506632651739
 PrefabInstance:
   m_ObjectHideFlags: 0
