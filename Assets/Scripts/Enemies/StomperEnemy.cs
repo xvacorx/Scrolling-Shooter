@@ -42,6 +42,7 @@ public class StomperEnemy : Enemy
         if (collision.gameObject.CompareTag("Ground"))
         {
             GameObject explosion = Instantiate(stompExplosion, contact.point, Quaternion.identity);
+            Destroy(explosion, 1f);
         }
         base.OnCollisionEnter(collision);
         isStomping = false;

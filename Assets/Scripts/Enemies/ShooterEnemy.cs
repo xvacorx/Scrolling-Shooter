@@ -19,7 +19,6 @@ public class ShooterEnemy : Enemy
         {
             plyr = plyrObject.transform;
         }
-
         shootingCoroutine = StartCoroutine(ShootContinuously());
     }
 
@@ -35,9 +34,16 @@ public class ShooterEnemy : Enemy
         {
             transform.position += Vector3.left * 5f * Time.deltaTime;
         }
-        if(transform.position.x <= shootPos)
+        else
         {
-            shooting = true;
+            if (!shooting)
+            {
+                shooting = true;
+                if (shootingCoroutine == null)
+                {
+                    shootingCoroutine = StartCoroutine(ShootContinuously());
+                }
+            }
         }
     }
     IEnumerator ShootContinuously()

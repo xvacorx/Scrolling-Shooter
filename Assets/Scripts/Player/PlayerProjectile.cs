@@ -17,7 +17,7 @@ public class PlayerProjectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("EnemyProjectile"))
+        if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("EnemyProjectile") && !other.gameObject.CompareTag("PowerUp"))
         {
             GameObject explosion = Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);

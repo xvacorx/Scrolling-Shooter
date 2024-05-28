@@ -9,6 +9,9 @@ public abstract class Enemy : MonoBehaviour
 
     public PlayerManager player;
 
+    public GameObject[] powerUps;
+    float dropChance = 0.3f;
+
     private void Start()
     {
         player = FindObjectOfType<PlayerManager>();
@@ -33,11 +36,23 @@ public abstract class Enemy : MonoBehaviour
         life -= hitDamage;
         if (life <= 0)
         {
+            OnEnemyDefeated();
             Destroy(gameObject);
         }
     }
     public void Despawn()
     {
         Destroy(gameObject);
+    }
+    public void OnEnemyDefeated()
+    {
+        float randomValue = Random.Range(0f, 1f);
+        if (randomValue <= dropChance)
+        {
+            int powerUpIndex = Random.Range(0, powerUps.Length);
+            GameObject selectedPowerUp = powerUps[powerUpIndex];
+
+            Instantiate(selectedPowerUp, transform.position, Quaternion.identity);
+        }
     }
 }
