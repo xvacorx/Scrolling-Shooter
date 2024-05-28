@@ -7,7 +7,7 @@ public abstract class Enemy : MonoBehaviour
     public float life;
     public float damage;
 
-    protected PlayerManager player;
+    public PlayerManager player;
 
     private void Start()
     {

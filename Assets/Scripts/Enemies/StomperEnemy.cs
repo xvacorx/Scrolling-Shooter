@@ -15,6 +15,7 @@ public class StomperEnemy : Enemy
 
     private void Start()
     {
+        player = FindObjectOfType<PlayerManager>();
         rb = GetComponent<Rigidbody>();
         stompPos = Random.Range(0, 4);
     }
@@ -51,12 +52,5 @@ public class StomperEnemy : Enemy
         rb.useGravity = true;
         isStomping = true;
         hasStomped = true;
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("PlayerProjectile"))
-        {
-            LoseLife(player.damage);
-        }
     }
 }

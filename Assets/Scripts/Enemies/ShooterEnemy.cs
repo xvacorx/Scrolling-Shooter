@@ -13,6 +13,7 @@ public class ShooterEnemy : Enemy
 
     void Start()
     {
+        player = FindObjectOfType<PlayerManager>();
         GameObject plyrObject = GameObject.FindGameObjectWithTag("Player");
         if (plyrObject != null)
         {
