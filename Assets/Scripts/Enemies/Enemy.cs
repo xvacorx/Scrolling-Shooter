@@ -7,6 +7,8 @@ public abstract class Enemy : MonoBehaviour
     public float life;
     public float damage;
 
+    public GameObject deathEffect;
+
     public PlayerManager player;
 
     public GameObject[] powerUps;
@@ -29,6 +31,8 @@ public abstract class Enemy : MonoBehaviour
         {
             playerManager.DecreaseHealth(damage);
             Despawn();
+            GameObject death = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(death, 1f);
         }
     }
     public void LoseLife(float hitDamage)

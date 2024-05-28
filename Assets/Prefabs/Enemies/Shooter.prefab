@@ -81,6 +81,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   damage: 5
+  deathEffect: {fileID: 1141330259687333427, guid: 6718dc24203da53468af9ada8fef7d6d,
+    type: 3}
+  player: {fileID: 0}
+  powerUps:
+  - {fileID: 49568571054236396, guid: d51b4a0f549769e47ae3071eb21906e7, type: 3}
+  - {fileID: 4528772804855272712, guid: c55ab21a74da9ae4480e7e2bce80eac3, type: 3}
+  - {fileID: 9201815090289065591, guid: 328254e768caba4499c0c41afcdd2da8, type: 3}
   projectile: {fileID: 9027514048236820045, guid: effb650189dc5714e9e9801b1cfb3991,
     type: 3}
   shootingPoint: {fileID: 8117424780127907070}

@@ -49,6 +49,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 5
   damage: 10
+  deathEffect: {fileID: 5985634496115995773, guid: 463cf9f7af4680240898f6aeba3fe3e6,
+    type: 3}
+  player: {fileID: 0}
+  powerUps:
+  - {fileID: 49568571054236396, guid: d51b4a0f549769e47ae3071eb21906e7, type: 3}
+  - {fileID: 4528772804855272712, guid: c55ab21a74da9ae4480e7e2bce80eac3, type: 3}
+  - {fileID: 9201815090289065591, guid: 328254e768caba4499c0c41afcdd2da8, type: 3}
   speed: 5
 --- !u!65 &1070862217975303685
 BoxCollider:

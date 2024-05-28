@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  attackSpeed: 0.5
+  attackSpeed: 1
   health: 100
 --- !u!114 &8505437039146950240
 MonoBehaviour:
