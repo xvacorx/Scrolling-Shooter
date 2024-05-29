@@ -57,7 +57,7 @@ MonoBehaviour:
   - {fileID: 49568571054236396, guid: d51b4a0f549769e47ae3071eb21906e7, type: 3}
   - {fileID: 4528772804855272712, guid: c55ab21a74da9ae4480e7e2bce80eac3, type: 3}
   - {fileID: 9201815090289065591, guid: 328254e768caba4499c0c41afcdd2da8, type: 3}
-  bossActive: 1
+  bossActive: 0
   stopPos: 11
   stomperSpawn: {fileID: 0}
   stomper: {fileID: 1638389421503248164, guid: 0ff34f9caebd13e4ab39395280b14a73, type: 3}
@@ -130,15 +130,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4421555957644834, guid: 6a3276423bc22a240bc8c1525a815940, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.49996
       objectReference: {fileID: 0}
     - target: {fileID: 4421555957644834, guid: 6a3276423bc22a240bc8c1525a815940, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.49996
       objectReference: {fileID: 0}
     - target: {fileID: 4421555957644834, guid: 6a3276423bc22a240bc8c1525a815940, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.49996
       objectReference: {fileID: 0}
     - target: {fileID: 4421555957644834, guid: 6a3276423bc22a240bc8c1525a815940, type: 3}
       propertyPath: m_LocalPosition.x

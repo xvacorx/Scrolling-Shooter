@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour
 
     private Coroutine shootingCoroutine;
 
+    public bool shootingEnabled = false;
     void Start()
     {
         playerManager = GetComponent<PlayerManager>();
@@ -29,7 +30,10 @@ public class PlayerShooting : MonoBehaviour
         while (true)
 
         {
-            Shoot();
+            if (shootingEnabled)
+            {
+                Shoot();
+            }
             yield return new WaitForSeconds(playerManager.attackSpeed);
         }
     }

@@ -18,6 +18,8 @@ public class Spawner : MonoBehaviour
     private float probabilityEnemy2 = 0.25f;
     //private float probabilityEnemy3 = 0.35f;
 
+    public int counter;
+
     void Start()
     {
         StartCoroutine(SpawnEnemies());
@@ -29,8 +31,9 @@ public class Spawner : MonoBehaviour
             if (spawnerActive)
             {
                 SpawnEnemy();
+                counter++;
             }
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
         }
 
     }

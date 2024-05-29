@@ -79,6 +79,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af7e18621cb9c54abbde164918dae81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  winScreen: {fileID: 0}
+  boss: {fileID: 0}
+  spawner: {fileID: 1987086009704848805}
+  time: {fileID: 0}
 --- !u!114 &1987086009704848805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cc9323b610f61419b0b4882e9eb4c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnerActive: 1
   enemy1: {fileID: 5589916243995860288, guid: bff0b52ea328ff34082d0fe095e24246, type: 3}
   enemy2: {fileID: 5680348432888222183, guid: 2ead73f6310a713418b46be0d1c9b05b, type: 3}
   enemy3: {fileID: 1638389421503248164, guid: 0ff34f9caebd13e4ab39395280b14a73, type: 3}

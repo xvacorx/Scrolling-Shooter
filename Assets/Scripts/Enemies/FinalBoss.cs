@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.VFX;
 
 public class FinalBoss : Enemy
@@ -13,22 +14,29 @@ public class FinalBoss : Enemy
     public Transform stomperSpawn;
     public GameObject stomper;
 
+    public GameManager gameManager;
+
     [SerializeField] GameObject projectile;
     [SerializeField] Transform shootingPoint;
 
     private Transform plyr;
     GameObject plyrObject;
     int counter;
+
+    public Slider slider;
     private void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         StartCoroutine(StomperSpawn());
         player = FindObjectOfType<PlayerManager>();
         plyrObject = GameObject.FindGameObjectWithTag("Player");
     }
     private void Update()
     {
+        slider.value = life;
         if (bossActive)
         {
+            slider.gameObject.SetActive(true);
             if (transform.position.x >= stopPos)
             {
                 transform.position += Vector3.left * 5f * Time.deltaTime;
@@ -80,6 +88,10 @@ public class FinalBoss : Enemy
             if(life % 5 == 0)
             {
                 OnEnemyDefeated();
+            }
+            if(life <= 0)
+            {
+                gameManager.WinMenu();
             }
         }
     }

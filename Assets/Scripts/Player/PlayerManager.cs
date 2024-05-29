@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -9,9 +10,16 @@ public class PlayerManager : MonoBehaviour
     public float health = 100f;
 
     GameManager manager;
+    public GameObject explode;
+
+    public Slider lifeSlider;
     private void Start()
     {
         manager = FindObjectOfType<GameManager>();
+    }
+    private void Update()
+    {
+        lifeSlider.value = health;
     }
     public void IncreaseDamage(float amount)
     {
@@ -41,6 +49,6 @@ public class PlayerManager : MonoBehaviour
     public void DecreaseHealth(float amount)
     {
         health -= amount;
-        if (health <= 0) { health = 0; manager.GameOver(); }
+        if (health <= 0) { health = 0; manager.GameOver(); Destroy(gameObject); Instantiate(explode, transform.position, Quaternion.identity); }
     }
 }
