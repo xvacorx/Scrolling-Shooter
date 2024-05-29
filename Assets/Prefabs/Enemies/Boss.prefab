@@ -53,7 +53,10 @@ MonoBehaviour:
   deathEffect: {fileID: 4593184484909914552, guid: 2e1e9506f5904a64b81744324fb7cd50,
     type: 3}
   player: {fileID: 0}
-  powerUps: []
+  powerUps:
+  - {fileID: 49568571054236396, guid: d51b4a0f549769e47ae3071eb21906e7, type: 3}
+  - {fileID: 4528772804855272712, guid: c55ab21a74da9ae4480e7e2bce80eac3, type: 3}
+  - {fileID: 9201815090289065591, guid: 328254e768caba4499c0c41afcdd2da8, type: 3}
   bossActive: 1
   stopPos: 11
   stomperSpawn: {fileID: 0}

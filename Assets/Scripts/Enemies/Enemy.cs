@@ -12,13 +12,13 @@ public abstract class Enemy : MonoBehaviour
     public PlayerManager player;
 
     public GameObject[] powerUps;
-    float dropChance = 0.3f;
+    float dropChance = 0.4f;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerManager>();
     }
-    private void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerProjectile"))
         {

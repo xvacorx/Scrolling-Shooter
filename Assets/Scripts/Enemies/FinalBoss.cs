@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.VFX;
@@ -68,6 +69,17 @@ public class FinalBoss : Enemy
             if (rb != null)
             {
                 rb.velocity = direction * 10;
+            }
+        }
+    }
+    public override void OnTriggerEnter(Collider other)
+    {
+        base.OnTriggerEnter(other);
+        if (other.gameObject.CompareTag("PlayerProjectile"))
+        {
+            if(life % 5 == 0)
+            {
+                OnEnemyDefeated();
             }
         }
     }

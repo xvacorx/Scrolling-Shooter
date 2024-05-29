@@ -14,9 +14,9 @@ public class Spawner : MonoBehaviour
     public Transform spawnPoint2;
     public Transform spawnPoint3;
 
-    private float probabilityEnemy1 = 0.6f;
-    private float probabilityEnemy2 = 0.3f;
-    private float probabilityEnemy3 = 0.1f;
+    private float probabilityEnemy1 = 0.4f;
+    private float probabilityEnemy2 = 0.25f;
+    //private float probabilityEnemy3 = 0.35f;
 
     void Start()
     {

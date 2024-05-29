@@ -70,11 +70,11 @@ public class ShooterEnemy : Enemy
             }
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("PlayerProjectile"))
-        {
-            LoseLife(player.damage);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("PlayerProjectile"))
+    //    {
+    //        LoseLife(player.damage);
+    //    }
+    //}
 }
