@@ -11,9 +11,18 @@ public class FinalBoss : Enemy
 
     public Transform stomperSpawn;
     public GameObject stomper;
+
+    [SerializeField] GameObject projectile;
+    [SerializeField] Transform shootingPoint;
+
+    private Transform plyr;
+    GameObject plyrObject;
+    int counter;
     private void Start()
     {
         StartCoroutine(StomperSpawn());
+        player = FindObjectOfType<PlayerManager>();
+        plyrObject = GameObject.FindGameObjectWithTag("Player");
     }
     private void Update()
     {
@@ -25,6 +34,10 @@ public class FinalBoss : Enemy
             }
 
         }
+        if (plyrObject != null)
+        {
+            plyr = plyrObject.transform;
+        }
     }
     IEnumerator StomperSpawn()
     {
@@ -32,13 +45,30 @@ public class FinalBoss : Enemy
         {
             if (bossActive)
             {
-                SpawnStomper();
+                counter++;
+                Shoot();
+                if(counter % 5  == 0) { SpawnStomper(); }
             }
-            yield return new WaitForSeconds(7f);
+            yield return new WaitForSeconds(3f);
         }
     }
     void SpawnStomper()
     {
         Instantiate(stomper, stomperSpawn);
+    }
+    void Shoot()
+    {
+        if (plyr != null)
+        {
+            GameObject newProjectile = Instantiate(projectile, shootingPoint.position, shootingPoint.rotation);
+            Vector3 direction = (plyr.position - shootingPoint.position).normalized;
+            newProjectile.transform.forward = direction;
+
+            Rigidbody rb = newProjectile.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.velocity = direction * 10;
+            }
+        }
     }
 }
