@@ -21,7 +21,13 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         foot = transform.Find("Foot");
     }
-
+    private void FixedUpdate()
+    {
+        if (!grounded)
+        {
+            rb.AddForce(0f, -downForce, 0f);
+        }
+    }
     private void Update()
     {
         GroundCheck();
@@ -35,10 +41,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(rb.velocity.x, jumpForce,0);
         }
 
-        if (!grounded)
-        {
-            rb.AddForce(0f, -downForce, 0f);
-        }
+
 
         rb.position = new(Mathf.Clamp(rb.position.x, xLeftLimit, xRightLimit), rb.position.y, 0);
     }

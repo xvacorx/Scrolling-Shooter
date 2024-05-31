@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         shoot = FindObjectOfType<PlayerShooting>();
         boss = FindObjectOfType<FinalBoss>();
-        spawner = FindObjectOfType<Spawner>();
+        spawner = GetComponent<Spawner>();
         mainMenu.SetActive(true);
         gameOverScreen.SetActive(false);
         boss.enabled = false;
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
             timer += Time.deltaTime;
         }
         time.text = timer.ToString("F2");
-        if (spawner.counter >= 25f && !bossReady) 
+        if (spawner.counter >= 15f && !bossReady) 
         {
             Debug.Log("boss");
             bossReady = true;
